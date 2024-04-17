@@ -1,19 +1,14 @@
-<html>
-    <head>
-        <title>Minha casa</title>
-    </head>
+{% extends "devices.html" %} 
+{% block content %}
+<h2>Atuadores</h2>
+<ul>
+    {% for k, v in actuators.items() %}
+    <li>{{ k }}: {{ v }}</li>
+    {% endfor %}
+</ul>
 
-    <body>
-        <h2>Atuadores</h2>
-        <ul>
-            {% for k, v in actuators.items() %}
-                <li>{{ k }}: {{ v }}</li>
-            {% endfor %}
-        </ul>
-        <p>Voltar para o <a href="/bedroom">quarto</a></p>
+{% endblock content %}
 
-        <a href="/">
-            <p>Voltar para pagina inicial</p>
-        </a>
-    </body>
-</html>
+{% block comodo %}
+quarto
+{% endblock comodo %}

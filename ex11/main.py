@@ -24,7 +24,7 @@ def bedroom_sensors():
         "Temperatura": 23,
         "Luminosidade": 1052
         }
-    return render_template("bedroom_sensor.html", sensors=sensors)
+    return render_template("bedroom_sensor.html", sensors=sensors, last_page="/bedroom")
 
 @app.route("/bedroom/actuators")
 def bedroom_actuators():
@@ -32,7 +32,7 @@ def bedroom_actuators():
         "Interruptor":0, 
         "Ar-condicionado":1
         }
-    return render_template("bedroom_actuators.html", actuators=actuators)
+    return render_template("bedroom_actuators.html", actuators=actuators, last_page="/bedroom")
 
 @app.route("/bathroom")
 def bathroom():
@@ -45,7 +45,7 @@ def bathroom():
 @app.route("/bathroom/sensors")
 def bathroom_sensors():
     sensors = {"Umidade": 80}
-    return render_template("bathroom_sensors.html", sensors=sensors)
+    return render_template("bathroom_sensors.html", sensors=sensors, last_page="/bathroom")
 
 @app.route("/bathroom/actuators")
 def bathroom_actuators():
@@ -53,7 +53,7 @@ def bathroom_actuators():
         "Lampada": 1,
         "Ventoinha": 1
         }
-    return render_template("bathroom_actuators.html", actuators=actuators)
+    return render_template("bathroom_actuators.html", actuators=actuators, last_page="/bathroom")
 
 
 
