@@ -1,0 +1,8 @@
+{% block content %}
+<h2>Banheiro</h2>
+<ul>
+    {% for k, v in devices.items() %}
+    <li><a href="{{v}}">{{k}}</a></li>
+    {% endfor %}
+</ul>
+{% endblock content %}
