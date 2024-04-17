@@ -13,7 +13,7 @@ def sensors():
         "Temperatura": 23, 
         "Luminosidade": 1034
         }
-    return render_template("sensors.html", sensors=sensors)
+    return render_template("sensors.html", devices=sensors, type="Sensores")
 
 @app.route("/actuators")
 def actuators():
@@ -21,7 +21,7 @@ def actuators():
         "Servo": 122,
         "Lampada": 1
         }
-    return render_template("actuators.html", actuators=actuators)
+    return render_template("actuators.html", devices=actuators, type="Atuadores")
 
 
 if __name__ == "__main__":
