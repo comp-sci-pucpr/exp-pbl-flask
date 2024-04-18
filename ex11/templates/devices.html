@@ -4,11 +4,11 @@
     </head>
 
     <body>
-        {% block content %}
-        
-        {% endblock content %}
-        
-        <p>Voltar para o <a href="{{last_page}}">{% block comodo %}{% endblock comodo %}</a></p>
+        {% block content %} {% endblock content %}
+        <p>
+            Voltar para o
+            <a href="{{last_page}}"> {% block comodo %}{% endblock comodo %}</a>
+        </p>
         <a href="/">
             <p>Voltar para pagina inicial</p>
         </a>
