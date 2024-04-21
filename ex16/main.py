@@ -145,5 +145,6 @@ def del_sensor():
     return render_template("list_sensors.html", dict_type="Sensores", dictionary=sensors)
 
 
+
 if __name__ == "__main__":
     app.run("0.0.0.0", port=80, debug=True)
